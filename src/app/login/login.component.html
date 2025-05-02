@@ -1,0 +1,38 @@
+
+<div class="login-container">
+  <div class="content-left">
+    <div class="brand">
+      <h1>Bright Bank</h1>
+    </div>
+    <div class="tagline">
+      <h2>One platform</h2>
+      <h2>to access a</h2>
+      <h2>complete set of</h2>
+      <h2><span>Global Financial</span></h2>
+      <h2>capabilities.</h2>
+    </div>
+  </div>
+  <div class="login-form">
+    <h2>Login</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>User Name</label>
+        <input type="text" [(ngModel)]="username" name="username" placeholder="Brettsmith@gmail.com">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" [(ngModel)]="password" name="password" placeholder="********">
+      </div>
+      <div class="form-options">
+        <label class="remember-me">
+          <input type="checkbox" [(ngModel)]="rememberMe" name="rememberMe">
+          Remember Me
+        </label>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+      </div>
+      <button type="submit" class="login-btn">LOGIN</button>
+      <p class="register-text">Don't have an account?</p>
+      <button type="button" class="register-btn">REGISTER AS NEW USER</button>
+    </form>
+  </div>
+</div>

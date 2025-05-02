@@ -1,0 +1,104 @@
+
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  background: url('/assets/background.png') no-repeat center center;
+  background-size: cover;
+}
+
+.content-left {
+  flex: 1;
+  padding: 2rem;
+  color: white;
+}
+
+.brand h1 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.tagline h2 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  font-weight: 300;
+}
+
+.tagline h2 span {
+  color: #FF6B6B;
+}
+
+.login-form {
+  width: 400px;
+  background: white;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.forgot-password {
+  color: #4A6EE0;
+  text-decoration: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #FF6B6B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.register-text {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #4A6EE0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
