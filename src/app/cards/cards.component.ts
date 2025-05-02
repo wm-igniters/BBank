@@ -1,16 +1,19 @@
 
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule, HeaderComponent],
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent {
+  userName: string = 'Brett Smith';
+  lastLogin: string = '04/06/2021, 05:48:25 PM';
   cards = [
     { 
       type: 'Personal Card',
