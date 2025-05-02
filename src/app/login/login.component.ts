@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,8 +16,11 @@ export class LoginComponent {
   password: string = '';
   rememberMe: boolean = false;
 
+  constructor(private router: Router) {}
+
   onSubmit() {
     // Handle login logic here
     console.log('Login attempt', { username: this.username, password: this.password });
+    this.router.navigate(['/dashboard']);
   }
 }

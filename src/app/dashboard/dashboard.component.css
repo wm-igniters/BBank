@@ -1,0 +1,144 @@
+
+.dashboard-container {
+  min-height: 100vh;
+  background: #f5f6fa;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6c5ce7;
+}
+
+.welcome {
+  font-size: 1rem;
+}
+
+.last-login {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.main-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.add-account {
+  padding: 0.5rem 1rem;
+  background: #ff7675;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.account-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.account-number {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.balance {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.transactions-list {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction-type {
+  font-weight: bold;
+}
+
+.transaction-to {
+  color: #666;
+}
+
+.transaction-detail {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.transaction-amount {
+  font-weight: bold;
+}
+
+.transaction-amount.positive {
+  color: #00b894;
+}
+
+.transaction-amount.negative {
+  color: #ff7675;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .accounts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
