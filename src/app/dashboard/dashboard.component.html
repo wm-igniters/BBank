@@ -16,17 +16,7 @@
   </nav>
 
   <div class="main-section">
-    <header class="header">
-      <div class="brand">BB*</div>
-      <div class="welcome">
-        Good Afternoon! {{userName}}
-        <div class="last-login">Last Login: {{lastLogin}}</div>
-      </div>
-      <div class="user-info">
-        <span>Admin</span>
-        <img src="/assets/user-avatar.png" alt="User" class="avatar"/>
-      </div>
-    </header>
+    <app-header [userName]="userName" [lastLogin]="lastLogin"></app-header>
 
     <div class="main-content">
       <div class="content-grid">

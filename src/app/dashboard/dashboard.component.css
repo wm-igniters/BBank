@@ -38,41 +38,7 @@
   flex-direction: column;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
 
-.brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #6c5ce7;
-}
-
-.welcome {
-  font-size: 1rem;
-}
-
-.last-login {
-  font-size: 0.8rem;
-  color: #666;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
 
 .main-content {
   padding: 2rem;
