@@ -1,0 +1,62 @@
+
+.cards-page-container {
+  padding: 2rem;
+  background: #f5f6fa;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.add-button {
+  padding: 0.5rem 1rem;
+  background: #ff7675;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.credit-card {
+  height: 180px;
+  border-radius: 15px;
+  padding: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card-type {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-number {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-holder span,
+.card-expiry span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
