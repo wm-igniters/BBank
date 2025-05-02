@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./apply-card.component.css']
 })
 export class ApplyCardComponent {
-  currentStep = 1;
+  currentStep = 2;
   steps = ['Card Details', 'Billing Address', 'Review'];
   billingAddress = {
     street: '',
