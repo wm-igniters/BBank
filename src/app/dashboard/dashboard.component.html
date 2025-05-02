@@ -29,45 +29,75 @@
     </header>
 
     <div class="main-content">
-      <div class="accounts-section">
-        <div class="section-header">
-          <h2>Accounts ({{accounts.length}})</h2>
-          <button class="add-account">+ Add Account</button>
-        </div>
-        
-        <div class="accounts-grid">
-          <div class="account-card" *ngFor="let account of accounts">
-            <div class="account-icon">{{account.currency}}</div>
-            <div class="account-details">
-              <h3>{{account.type}}</h3>
-              <p class="account-number">{{account.number}}</p>
-              <h2 class="balance">{{account.currency}} {{account.balance}}</h2>
+      <div class="content-grid">
+        <div class="left-column">
+          <div class="accounts-section">
+            <div class="section-header">
+              <h2>Accounts ({{accounts.length}})</h2>
+              <button class="add-button">+ Add Account</button>
             </div>
-            <div class="card-count" *ngIf="account.cards">{{account.cards}} Cards</div>
+            
+            <div class="accounts-grid">
+              <div class="account-card" *ngFor="let account of accounts">
+                <div class="account-icon">{{account.currency}}</div>
+                <div class="account-details">
+                  <h3>{{account.type}}</h3>
+                  <p class="account-number">{{account.number}}</p>
+                  <h2 class="balance">{{account.currency}} {{account.balance}}</h2>
+                </div>
+                <div class="card-count" *ngIf="account.cards">{{account.cards}} Cards</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-section">
+            <div class="section-header">
+              <h2>Cards ({{cards.length}})</h2>
+              <button class="add-button">+ Add Card</button>
+            </div>
+            
+            <div class="cards-grid">
+              <div class="credit-card" *ngFor="let card of cards" [style.background-image]="card.background">
+                <div class="card-type">{{card.type}}</div>
+                <div class="card-number">•••• •••• •••• {{card.lastFourDigits}}</div>
+                <div class="card-details">
+                  <div class="card-holder">
+                    <span>Card Holder Name</span>
+                    <div>{{card.holderName}}</div>
+                  </div>
+                  <div class="card-expiry">
+                    <span>Expiry Date</span>
+                    <div>{{card.expiryDate}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="transactions-section">
-        <div class="section-header">
-          <h2>Recent Transactions</h2>
-          <a href="#" class="view-all">All Accounts</a>
-        </div>
-        
-        <div class="transactions-list">
-          <div class="transaction-item" *ngFor="let transaction of transactions">
-            <div class="transaction-icon">
-              <i [class]="transaction.icon"></i>
+        <div class="right-column">
+          <div class="transactions-section">
+            <div class="section-header">
+              <h2>Recent Transactions</h2>
+              <a href="#" class="view-all">All Accounts</a>
             </div>
-            <div class="transaction-info">
-              <div class="transaction-type">{{transaction.type}}</div>
-              <div class="transaction-to">{{transaction.to || transaction.from}}</div>
-              <div class="transaction-time">{{transaction.time}}</div>
-            </div>
-            <div class="transaction-details">
-              <div class="transaction-account">{{transaction.debitedFrom || transaction.creditedTo}}</div>
-              <div class="transaction-amount" [ngClass]="{'positive': transaction.amount.includes('+'), 'negative': transaction.amount.includes('-')}">
-                {{transaction.amount}}
+            
+            <div class="transactions-list">
+              <div class="transaction-item" *ngFor="let transaction of transactions">
+                <div class="transaction-icon">
+                  <i [class]="transaction.icon"></i>
+                </div>
+                <div class="transaction-info">
+                  <div class="transaction-type">{{transaction.type}}</div>
+                  <div class="transaction-to">{{transaction.to || transaction.from}}</div>
+                  <div class="transaction-time">{{transaction.time}}</div>
+                </div>
+                <div class="transaction-details">
+                  <div class="transaction-account">{{transaction.debitedFrom || transaction.creditedTo}}</div>
+                  <div class="transaction-amount" [ngClass]="{'positive': transaction.amount.includes('+'), 'negative': transaction.amount.includes('-')}">
+                    {{transaction.amount}}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

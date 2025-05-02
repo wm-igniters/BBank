@@ -16,6 +16,22 @@ export class DashboardComponent {
     { type: 'Euro Current Account', number: 'XXXX-8559', balance: '400', currency: '€', cards: 2 },
     { type: 'Savings Account', number: 'XXXX-8559', balance: '204.50', currency: '£' }
   ];
+  cards = [
+    { 
+      type: 'Personal Card',
+      lastFourDigits: '4567',
+      holderName: 'Brett Smith',
+      expiryDate: '05/2025',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+    },
+    {
+      type: 'Business Card',
+      lastFourDigits: '8559',
+      holderName: 'Brett Smith',
+      expiryDate: '05/2025',
+      background: 'linear-gradient(135deg, #6B73FF 0%, #000DFF 100%)'
+    }
+  ];
   transactions = [
     { type: 'Payment', to: 'Uber', amount: '-376€', time: '05:25 PM', debitedFrom: 'Personal Card', icon: 'fas fa-car' },
     { type: 'Received From', from: 'Ralph Scott', amount: '+450 €', time: '2 hours ago', creditedTo: 'Savings Account', icon: 'fas fa-exchange-alt' },
