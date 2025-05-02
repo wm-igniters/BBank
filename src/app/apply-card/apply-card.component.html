@@ -1,0 +1,70 @@
+
+<div class="apply-card-container">
+  <div class="header">
+    <h1>Apply for Virtual Card</h1>
+    <div class="steps">
+      <div *ngFor="let step of steps; let i = index" 
+           [class.active]="currentStep === i + 1"
+           [class.completed]="currentStep > i + 1"
+           class="step">
+        <div class="step-number">{{i + 1}}</div>
+        <div class="step-name">{{step}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" [ngSwitch]="currentStep">
+    <div *ngSwitchCase="1">
+      <!-- Card Details step content here -->
+      <h2>Card Details</h2>
+      <!-- Add card details form -->
+    </div>
+
+    <div *ngSwitchCase="2">
+      <h2>Billing Address</h2>
+      <form class="billing-form">
+        <div class="form-group">
+          <label>Street Address</label>
+          <input type="text" [(ngModel)]="billingAddress.street" name="street">
+        </div>
+        <div class="form-group">
+          <label>Apartment Suite</label>
+          <input type="text" [(ngModel)]="billingAddress.apartment" name="apartment">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" [(ngModel)]="billingAddress.city" name="city">
+          </div>
+          <div class="form-group">
+            <label>State</label>
+            <input type="text" [(ngModel)]="billingAddress.state" name="state">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Zip Code</label>
+            <input type="text" [(ngModel)]="billingAddress.zipCode" name="zipCode">
+          </div>
+          <div class="form-group">
+            <label>Country</label>
+            <input type="text" [(ngModel)]="billingAddress.country" name="country">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div *ngSwitchCase="3">
+      <h2>Review</h2>
+      <!-- Add review content -->
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn-cancel" (click)="cancel()">CANCEL</button>
+    <div class="right-actions">
+      <button *ngIf="currentStep > 1" class="btn-back" (click)="previousStep()">BACK</button>
+      <button class="btn-next" (click)="nextStep()">NEXT</button>
+    </div>
+  </div>
+</div>
