@@ -13,12 +13,16 @@ export class DashboardComponent {
   userName: string = 'Brett Smith';
   lastLogin: string = '04/06/2021, 05:48:25 PM';
   accounts = [
-    { type: 'Euro Current Account', number: 'XXXX-8559', balance: '400', currency: '€' },
+    { type: 'Euro Current Account', number: 'XXXX-8559', balance: '400', currency: '€', cards: 2 },
     { type: 'Savings Account', number: 'XXXX-8559', balance: '204.50', currency: '£' }
   ];
   transactions = [
-    { type: 'Payment', to: 'Uber', amount: '-376€', time: '05:25 PM', debitedFrom: 'Personal Card' },
-    { type: 'Received From', from: 'Ralph Scott', amount: '+450 €', time: '2 hours ago', creditedTo: 'Savings Account' },
-    { type: 'Salary Deposit', amount: '+5000€', time: '10 Hours ago', debitedFrom: 'Personal Card' }
+    { type: 'Payment', to: 'Uber', amount: '-376€', time: '05:25 PM', debitedFrom: 'Personal Card', icon: 'fas fa-car' },
+    { type: 'Received From', from: 'Ralph Scott', amount: '+450 €', time: '2 hours ago', creditedTo: 'Savings Account', icon: 'fas fa-exchange-alt' },
+    { type: 'Salary Deposit', amount: '+5000€', time: '10 Hours ago', debitedFrom: 'Personal Card', icon: 'fas fa-money-bill-wave' },
+    { type: 'Payment To', to: 'Douglas Spencer', amount: '-376€', time: '05:25 PM', debitedFrom: 'Personal Card', icon: 'fas fa-user' },
+    { type: 'Payment To', to: 'Jonanthan Russell', amount: '+450 €', time: '5 hours ago', debitedFrom: 'Personal Card', icon: 'fas fa-user' },
+    { type: 'Payment To', to: 'Eric Aguilar', amount: '-376€', time: '05:25 PM', debitedFrom: 'Personal Card', icon: 'fas fa-user' },
+    { type: 'Payment To', to: 'Andrea Alvaroado', amount: '+5000€', time: '10 Hours ago', debitedFrom: 'Personal Card', icon: 'fas fa-user' }
   ];
 }
