@@ -5,6 +5,7 @@ import { ApplyCardComponent } from './apply-card/apply-card.component';
 import { CardsComponent } from './cards/cards.component';
 import { RegisterTypeComponent } from './register-type/register-type.component';
 import { IndividualRegisterComponent } from './individual-register/individual-register.component';
+import { CardDetailsComponent } from './card-details/card-details.component';
 
 export const routes: Routes = [
   { path: '', component: LoginComponent },
