@@ -19,7 +19,7 @@ export class DashboardComponent {
     { type: 'Savings Account', number: 'XXXX-8559', balance: '204.50', currency: '£' }
   ];
   cards = [
-    { 
+    {
       type: 'Personal Card',
       lastFourDigits: '4567',
       holderName: 'Brett Smith',

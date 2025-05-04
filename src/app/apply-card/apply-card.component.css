@@ -165,3 +165,100 @@ button {
   background: #6c5ce7;
   color: white;
 }
+
+
+
+.apply-card-container {
+  padding: var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.header h1 {
+  font-size: var(--font-size-xl);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  position: relative;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: var(--border-color);
+  z-index: 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  z-index: 1;
+  min-width: 120px;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.step-name {
+  font-size: var(--font-size-sm);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.step.active .step-number {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+.step.active .step-name {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.step.completed .step-number {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--white);
+}
+
+/* Interactive states for input fields */
+input,
+select {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-base);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary-color);
