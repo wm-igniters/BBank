@@ -36,20 +36,20 @@ export class ApplyCardComponent {
   constructor(private router: Router) {}
 
   isCardDetailsValid(): boolean {
-    return this.cardDetails.cardType && 
-           this.cardDetails.cardName && 
-           this.cardDetails.incomeSource && 
-           this.cardDetails.monthlyIncome && 
-           this.cardDetails.employmentStatus && 
-           this.cardDetails.purpose;
+    return !!this.cardDetails.cardType && 
+           !!this.cardDetails.cardName && 
+           !!this.cardDetails.incomeSource && 
+           !!this.cardDetails.monthlyIncome && 
+           !!this.cardDetails.employmentStatus && 
+           !!this.cardDetails.purpose;
   }
 
   isBillingAddressValid(): boolean {
-    return this.billingAddress.street && 
-           this.billingAddress.city && 
-           this.billingAddress.state && 
-           this.billingAddress.zipCode && 
-           this.billingAddress.country;
+    return !!this.billingAddress.street && 
+           !!this.billingAddress.city && 
+           !!this.billingAddress.state && 
+           !!this.billingAddress.zipCode && 
+           !!this.billingAddress.country;
   }
 
   nextStep() {

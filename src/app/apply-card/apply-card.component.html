@@ -29,14 +29,24 @@
           </div>
           <div class="form-group">
             <label>Name on Card</label>
-            <input type="text" [(ngModel)]="cardDetails.cardName" name="cardName" required placeholder="Enter name as it should appear">
+            <input
+              type="text"
+              [(ngModel)]="cardDetails.cardName"
+              name="cardName"
+              required
+              placeholder="Enter name as it should appear"
+            />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label>Source of Income</label>
-            <select [(ngModel)]="cardDetails.incomeSource" name="incomeSource" required>
+            <select
+              [(ngModel)]="cardDetails.incomeSource"
+              name="incomeSource"
+              required
+            >
               <option value="">Select income source</option>
               <option value="salary">Salary</option>
               <option value="business">Business</option>
@@ -45,14 +55,24 @@
           </div>
           <div class="form-group">
             <label>Monthly Income</label>
-            <input type="number" [(ngModel)]="cardDetails.monthlyIncome" name="monthlyIncome" required placeholder="Enter amount">
+            <input
+              type="number"
+              [(ngModel)]="cardDetails.monthlyIncome"
+              name="monthlyIncome"
+              required
+              placeholder="Enter amount"
+            />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label>Employment Status</label>
-            <select [(ngModel)]="cardDetails.employmentStatus" name="employmentStatus" required>
+            <select
+              [(ngModel)]="cardDetails.employmentStatus"
+              name="employmentStatus"
+              required
+            >
               <option value="">Select status</option>
               <option value="employed">Employed</option>
               <option value="self-employed">Self Employed</option>
