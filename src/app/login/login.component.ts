@@ -1,15 +1,14 @@
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, RouterLink, FormsModule],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
   username: string = '';
@@ -20,7 +19,10 @@ export class LoginComponent {
 
   onSubmit() {
     // Handle login logic here
-    console.log('Login attempt', { username: this.username, password: this.password });
+    console.log('Login attempt', {
+      username: this.username,
+      password: this.password,
+    });
     this.router.navigate(['/dashboard']);
   }
 }
