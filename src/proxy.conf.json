@@ -1,0 +1,8 @@
+
+{
+  "/academy-custom/*": {
+    "target": "http://54.146.205.133:8070",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

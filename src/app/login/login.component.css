@@ -93,6 +93,12 @@
   color: #666;
 }
 
+.error-message {
+  color: #ff0000;
+  margin: 10px 0;
+  text-align: center;
+}
+
 .register-btn {
   width: 100%;
   padding: 1rem;
