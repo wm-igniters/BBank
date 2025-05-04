@@ -22,61 +22,76 @@
       <div class="breadcrumb">
         <span routerLink="/cards">Cards</span>
         <i class="fas fa-chevron-right"></i>
-        <span>Card Details</span>
+        <span class="current">Card Details</span>
       </div>
 
-      <div class="card-section">
-        <div class="credit-card" [style.background]="card?.background">
-          <div class="card-type">{{card?.type}}</div>
-          <div class="card-number">•••• •••• •••• {{card?.lastFourDigits}}</div>
-          <div class="card-details">
-            <div class="card-holder">
-              <span>Card Holder Name</span>
-              <div>{{card?.holderName}}</div>
-            </div>
-            <div class="card-expiry">
-              <span>Expiry Date</span>
-              <div>{{card?.expiryDate}}</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="action-buttons">
-          <button class="btn-transfer">TRANSFER FUNDS</button>
-          <button class="btn-fund">FUND CARD</button>
-        </div>
-      </div>
-
-      <div class="transactions-section">
-        <div class="section-header">
-          <h2>Recent Transactions</h2>
-          <div class="header-actions">
-            <div class="search-box">
-              <i class="fas fa-search"></i>
-              <input type="text" placeholder="Search">
-            </div>
-            <select class="month-select">
-              <option>Aug 2002</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="transactions-list">
-          <div class="transaction-item" *ngFor="let transaction of transactions">
-            <div class="transaction-icon">
-              <i [class]="transaction.icon"></i>
-            </div>
-            <div class="transaction-info">
-              <div class="transaction-type">{{transaction.type}}</div>
-              <div class="transaction-to">{{transaction.to || transaction.from}}</div>
-              <div class="transaction-time">{{transaction.time}}</div>
-            </div>
-            <div class="transaction-details">
-              <div class="transaction-account">{{transaction.debitedFrom || transaction.creditedTo}}</div>
-              <div class="transaction-amount" [ngClass]="{'positive': transaction.amount.includes('+'), 'negative': transaction.amount.includes('-')}">
-                {{transaction.amount}}
+      <div class="content-grid">
+        <div class="left-section">
+          <div class="card-section">
+            <div class="credit-card" [style.background]="card?.background">
+              <div class="card-type">{{card?.type}}</div>
+              <div class="card-number">•••• •••• •••• {{card?.lastFourDigits}}</div>
+              <div class="card-details">
+                <div class="card-holder">
+                  <span>Card Holder Name</span>
+                  <div>{{card?.holderName}}</div>
+                </div>
+                <div class="card-expiry">
+                  <span>Expiry Date</span>
+                  <div>{{card?.expiryDate}}</div>
+                </div>
               </div>
             </div>
+
+            <div class="action-buttons">
+              <button class="btn-transfer">TRANSFER FUNDS</button>
+              <button class="btn-fund">FUND CARD</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-section">
+          <div class="tabs">
+            <div class="tab" [class.active]="activeTab === 'transactions'" (click)="activeTab = 'transactions'">Transactions</div>
+            <div class="tab" [class.active]="activeTab === 'analysis'" (click)="activeTab = 'analysis'">Spend Analysis</div>
+          </div>
+
+          <div class="tab-content" *ngIf="activeTab === 'transactions'">
+            <div class="section-header">
+              <div class="header-actions">
+                <div class="search-box">
+                  <i class="fas fa-search"></i>
+                  <input type="text" placeholder="Search">
+                </div>
+                <select class="month-select">
+                  <option>Aug 2002</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="transactions-list">
+              <div class="transaction-item" *ngFor="let transaction of transactions">
+                <div class="transaction-icon">
+                  <i [class]="transaction.icon"></i>
+                </div>
+                <div class="transaction-info">
+                  <div class="transaction-type">{{transaction.type}}</div>
+                  <div class="transaction-to">{{transaction.to || transaction.from}}</div>
+                  <div class="transaction-time">{{transaction.time}}</div>
+                </div>
+                <div class="transaction-details">
+                  <div class="transaction-account">{{transaction.debitedFrom || transaction.creditedTo}}</div>
+                  <div class="transaction-amount" [ngClass]="{'positive': transaction.amount.includes('+'), 'negative': transaction.amount.includes('-')}">
+                    {{transaction.amount}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" *ngIf="activeTab === 'analysis'">
+            <h3>Spend Analysis</h3>
+            <!-- Add spend analysis content here -->
           </div>
         </div>
       </div>

@@ -15,6 +15,7 @@ export class CardDetailsComponent implements OnInit {
   userName: string = 'Brett Smith';
   lastLogin: string = '04/06/2021, 05:48:25 PM';
   card: any;
+  activeTab: string = 'transactions';
   transactions = [
     { type: 'Payment', to: 'Uber', amount: '-376€', time: '05:25 PM', debitedFrom: 'Personal Card', icon: 'fas fa-car' },
     { type: 'Received From', from: 'Ralph Scott', amount: '+450 €', time: '2 hours ago', creditedTo: 'Savings Account', icon: 'fas fa-exchange-alt' },
