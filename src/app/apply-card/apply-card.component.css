@@ -86,12 +86,27 @@
   margin-bottom: 2rem;
 }
 
-.billing-form {
+.billing-form,
+.card-details-form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 800px;
   margin: 0 auto;
+}
+
+input:required,
+select:required {
+  border-left: 3px solid #6c5ce7;
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border-color: #ff7675;
+}
+
+select {
+  height: 42px;
 }
 
 .form-group {

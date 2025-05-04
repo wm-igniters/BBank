@@ -16,9 +16,60 @@
 
   <div class="content" [ngSwitch]="currentStep">
     <div *ngSwitchCase="1">
-      <!-- Card Details step content here -->
       <h2>Card Details</h2>
-      <!-- Add card details form -->
+      <form class="card-details-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Card Type</label>
+            <select [(ngModel)]="cardDetails.cardType" name="cardType" required>
+              <option value="">Select card type</option>
+              <option value="virtual">Virtual Card</option>
+              <option value="physical">Physical Card</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Name on Card</label>
+            <input type="text" [(ngModel)]="cardDetails.cardName" name="cardName" required placeholder="Enter name as it should appear">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Source of Income</label>
+            <select [(ngModel)]="cardDetails.incomeSource" name="incomeSource" required>
+              <option value="">Select income source</option>
+              <option value="salary">Salary</option>
+              <option value="business">Business</option>
+              <option value="investment">Investment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Monthly Income</label>
+            <input type="number" [(ngModel)]="cardDetails.monthlyIncome" name="monthlyIncome" required placeholder="Enter amount">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Employment Status</label>
+            <select [(ngModel)]="cardDetails.employmentStatus" name="employmentStatus" required>
+              <option value="">Select status</option>
+              <option value="employed">Employed</option>
+              <option value="self-employed">Self Employed</option>
+              <option value="student">Student</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Purpose of Card</label>
+            <select [(ngModel)]="cardDetails.purpose" name="purpose" required>
+              <option value="">Select purpose</option>
+              <option value="shopping">Shopping</option>
+              <option value="business">Business</option>
+              <option value="travel">Travel</option>
+            </select>
+          </div>
+        </div>
+      </form>
     </div>
 
     <div *ngSwitchCase="2">
