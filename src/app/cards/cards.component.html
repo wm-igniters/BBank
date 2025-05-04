@@ -25,7 +25,7 @@
       </div>
 
       <div class="cards-grid">
-        <div class="credit-card" *ngFor="let card of cards" [style.background]="card.background">
+        <div class="credit-card" *ngFor="let card of cards" [style.background]="card.background" [routerLink]="['/cards', card.lastFourDigits]">
           <div class="card-type">{{card.type}}</div>
           <div class="card-number">•••• •••• •••• {{card.lastFourDigits}}</div>
           <div class="card-details">

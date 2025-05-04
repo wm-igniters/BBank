@@ -13,5 +13,6 @@ export const routes: Routes = [
   { path: 'register/individual', component: IndividualRegisterComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'cards', component: CardsComponent },
+  { path: 'cards/:id', component: CardDetailsComponent },
   { path: 'apply-card', component: ApplyCardComponent },
 ];
