@@ -21,51 +21,46 @@
     <div class="content">
       <div class="breadcrumb">
         <span routerLink="/cards">Cards</span>
-        <i class="fas fa-chevron-right"></i>
+        <span class="chevron">></span>
         <span class="current">Card Details</span>
       </div>
 
-      <div class="content-grid">
-        <div class="left-section">
-          <div class="card-section">
-            <div class="credit-card" [style.background]="card?.background">
-              <div class="card-type">{{card?.type}}</div>
-              <div class="card-number">•••• •••• •••• {{card?.lastFourDigits}}</div>
-              <div class="card-details">
-                <div class="card-holder">
-                  <span>Card Holder Name</span>
-                  <div>{{card?.holderName}}</div>
-                </div>
-                <div class="card-expiry">
-                  <span>Expiry Date</span>
-                  <div>{{card?.expiryDate}}</div>
-                </div>
-              </div>
+      <div class="content-layout">
+        <div class="credit-card" [style.background]="card?.background">
+          <div class="card-type">{{card?.type}}</div>
+          <div class="card-number">•••• •••• •••• {{card?.lastFourDigits}}</div>
+          <div class="card-details">
+            <div class="card-holder">
+              <span>Card Holder Name</span>
+              <div>{{card?.holderName}}</div>
             </div>
-
-            <div class="action-buttons">
-              <button class="btn-transfer">TRANSFER FUNDS</button>
-              <button class="btn-fund">FUND CARD</button>
+            <div class="card-expiry">
+              <span>Expiry Date</span>
+              <div>{{card?.expiryDate}}</div>
             </div>
           </div>
         </div>
 
-        <div class="right-section">
+        <div class="action-buttons">
+          <button class="btn-transfer">TRANSFER FUNDS</button>
+          <button class="btn-fund">FUND CARD</button>
+        </div>
+
+        <div class="transactions-section">
           <div class="tabs">
             <div class="tab" [class.active]="activeTab === 'transactions'" (click)="activeTab = 'transactions'">Transactions</div>
             <div class="tab" [class.active]="activeTab === 'analysis'" (click)="activeTab = 'analysis'">Spend Analysis</div>
           </div>
 
           <div class="tab-content" *ngIf="activeTab === 'transactions'">
-            <div class="section-header">
-              <div class="header-actions">
-                <div class="search-box">
-                  <i class="fas fa-search"></i>
-                  <input type="text" placeholder="Search">
-                </div>
-                <select class="month-select">
-                  <option>Aug 2002</option>
-                </select>
+            <div class="search-section">
+              <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+              </div>
+              <div class="month-select">
+                <span>Aug 2002</span>
+                <i class="fas fa-calendar"></i>
               </div>
             </div>
 
@@ -77,13 +72,13 @@
                 <div class="transaction-info">
                   <div class="transaction-type">{{transaction.type}}</div>
                   <div class="transaction-to">{{transaction.to || transaction.from}}</div>
-                  <div class="transaction-time">{{transaction.time}}</div>
                 </div>
                 <div class="transaction-details">
-                  <div class="transaction-account">{{transaction.debitedFrom || transaction.creditedTo}}</div>
-                  <div class="transaction-amount" [ngClass]="{'positive': transaction.amount.includes('+'), 'negative': transaction.amount.includes('-')}">
+                  <div class="transaction-id">{{transaction.debitedFrom || transaction.creditedTo}}</div>
+                  <div class="transaction-amount" [class.positive]="transaction.amount.includes('+')" [class.negative]="transaction.amount.includes('-')">
                     {{transaction.amount}}
                   </div>
+                  <div class="transaction-time">{{transaction.time}}</div>
                 </div>
               </div>
             </div>
@@ -91,7 +86,6 @@
 
           <div class="tab-content" *ngIf="activeTab === 'analysis'">
             <h3>Spend Analysis</h3>
-            <!-- Add spend analysis content here -->
           </div>
         </div>
       </div>
