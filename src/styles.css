@@ -8,7 +8,18 @@
 body {
   min-height: 100vh;
 }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
+  /* Typography */
+  --font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
   /* Colors */
   --primary-color: #6c5ce7;
   --secondary-color: #00b894;
@@ -17,19 +28,20 @@ body {
   --border-color: #e0e0e0;
   --white: #ffffff;
   --error-color: #ff7675;
-  
+
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
-  
+
   /* Border Radius */
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 12px;
-  
+
   /* Font Sizes */
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;

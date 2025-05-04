@@ -1,4 +1,3 @@
-
 .dashboard-container {
   min-height: 100vh;
   background: #f5f6fa;
@@ -9,7 +8,7 @@
   width: 250px;
   background: white;
   padding: 2rem 0;
-  box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-item {
@@ -79,7 +78,7 @@
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -101,7 +100,7 @@
   justify-content: space-between;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-type {
@@ -252,6 +251,33 @@
 
 .credit-card:active {
   transform: translateY(-2px);
+}
+
+.transaction-time {
+  color: #666;
+  font-size: 0.7rem;
+}
+
+.transaction-details {
+  text-align: right;
+}
+
+.transaction-account {
+  font-size: 14px;
+  /* color: #333; */
+}
+
+.transaction-to {
+  color: #666
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family);
 }
 
 /* Additional elements may require similar hover and active states */
