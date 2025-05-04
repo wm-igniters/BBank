@@ -62,3 +62,15 @@ body {
 }
 /* You can add global styles to this file, and also import other style files */
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-mdc-form-field-focus-overlay {
+  background-color: white !important;
+}
+
+.mdc-text-field--outlined {
+  background-color: white !important;
+}
+
+.mat-mdc-form-field-flex {
+  background-color: white !important;
+}
