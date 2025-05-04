@@ -15,22 +15,28 @@
     <h2>Login</h2>
     <form (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label>User Name</label>
-        <input
-          type="text"
-          [(ngModel)]="username"
-          name="username"
-          placeholder="Brettsmith@gmail.com"
-        />
+        <mat-form-field appearance="outline">
+          <mat-label>User Name</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="username"
+            name="username"
+            placeholder="Brettsmith@gmail.com"
+          />
+        </mat-form-field>
       </div>
       <div class="form-group">
-        <label>Password</label>
-        <input
-          type="password"
-          [(ngModel)]="password"
-          name="password"
-          placeholder="********"
-        />
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+            placeholder="********"
+          />
+        </mat-form-field>
       </div>
       <div class="form-options">
         <label class="remember-me">

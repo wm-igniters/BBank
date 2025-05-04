@@ -11,3 +11,15 @@ exposeLocalhost = true
 
 [deployment]
 run = ["sh", "-c", "npm run watch"]
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 42104384
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run start"
