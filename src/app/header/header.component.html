@@ -9,9 +9,15 @@
   </div>
   <div class="user-info">
     <div class="user-role">Admin</div>
-    <div class="avatar-wrapper">
+    <div class="avatar-wrapper" [matMenuTriggerFor]="userMenu">
       <img src="/assets/user-avatar.png" alt="User" class="avatar"/>
       <div class="status-dot"></div>
     </div>
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item (click)="logout()">
+        <i class="fas fa-sign-out-alt"></i>
+        Logout
+      </button>
+    </mat-menu>
   </div>
 </header>
