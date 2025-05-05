@@ -14,6 +14,10 @@ import { HeaderComponent } from '../header/header.component';
 export class CardsComponent {
   userName: string = 'Brett Smith';
   lastLogin: string = '04/06/2021, 05:48:25 PM';
+  
+  get cards() {
+    return [...this.physicalCards, ...this.virtualCards];
+  }
   physicalCards = [
     { 
       type: 'Personal Card (Debit)',
