@@ -1,3 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+
 * {
   margin: 0;
   padding: 0;
@@ -60,8 +64,6 @@ body {
   min-height: 100vh;
   background-color: var(--background-color);
 }
-/* You can add global styles to this file, and also import other style files */
-@import "@angular/material/prebuilt-themes/indigo-pink.css";
 
 .mat-mdc-form-field-focus-overlay {
   background-color: white !important;
