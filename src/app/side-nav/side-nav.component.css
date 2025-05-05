@@ -1,0 +1,30 @@
+
+.side-nav {
+  width: 250px;
+  background: white;
+  padding: 2rem 0;
+  height: 100vh;
+  border-right: 1px solid var(--border-color);
+}
+
+.nav-item {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background: #f5f6fa;
+}
+
+.nav-item.active {
+  background: #6c5ce7;
+  color: white;
+}
+
+.nav-item i {
+  font-size: 1.2rem;
+}

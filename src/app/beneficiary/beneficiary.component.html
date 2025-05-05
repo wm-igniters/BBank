@@ -1,19 +1,6 @@
 
 <div class="beneficiary-container">
-  <nav class="side-nav">
-    <div class="nav-item" routerLink="/dashboard">
-      <i class="fas fa-th-large"></i>
-      Dashboard
-    </div>
-    <div class="nav-item active">
-      <i class="fas fa-user"></i>
-      Beneficiary
-    </div>
-    <div class="nav-item" routerLink="/cards">
-      <i class="fas fa-credit-card"></i>
-      Cards
-    </div>
-  </nav>
+  <app-side-nav></app-side-nav>
 
   <div class="main-section">
     <app-header [userName]="userName" [lastLogin]="lastLogin"></app-header>

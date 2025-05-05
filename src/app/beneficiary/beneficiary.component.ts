@@ -2,12 +2,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { SideNavComponent } from '../side-nav/side-nav.component';
 import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-beneficiary',
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent],
+  imports: [CommonModule, RouterModule, HeaderComponent, SideNavComponent],
   templateUrl: './beneficiary.component.html',
   styleUrls: ['./beneficiary.component.css']
 })

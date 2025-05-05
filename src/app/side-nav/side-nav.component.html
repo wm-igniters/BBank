@@ -1,0 +1,15 @@
+
+<nav class="side-nav">
+  <div class="nav-item" routerLink="/dashboard" [class.active]="activeRoute === 'dashboard'">
+    <i class="fas fa-th-large"></i>
+    Dashboard
+  </div>
+  <div class="nav-item" routerLink="/beneficiary" [class.active]="activeRoute === 'beneficiary'">
+    <i class="fas fa-user"></i>
+    Beneficiary
+  </div>
+  <div class="nav-item" routerLink="/cards" [class.active]="activeRoute === 'cards'">
+    <i class="fas fa-credit-card"></i>
+    Cards
+  </div>
+</nav>

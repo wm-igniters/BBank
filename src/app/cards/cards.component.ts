@@ -1,20 +1,20 @@
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
+import { SideNavComponent } from '../side-nav/side-nav.component';
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent],
+  imports: [CommonModule, RouterModule, HeaderComponent, SideNavComponent],
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent {
   userName: string = 'Brett Smith';
   lastLogin: string = '04/06/2021, 05:48:25 PM';
-  
+
   get cards() {
     return [...this.physicalCards, ...this.virtualCards];
   }
