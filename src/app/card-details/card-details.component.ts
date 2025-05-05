@@ -12,7 +12,7 @@ import * as Highcharts from 'highcharts';
   templateUrl: './card-details.component.html',
   styleUrls: ['./card-details.component.css'],
 })
-export class CardDetailsComponent implements OnInit, AfterViewInit {
+export class CardDetailsComponent implements OnInit {
   Highcharts: typeof Highcharts = Highcharts;
   chartOptions: Highcharts.Options = {
     chart: {
@@ -36,38 +36,7 @@ export class CardDetailsComponent implements OnInit, AfterViewInit {
   userName: string = 'Brett Smith';
   lastLogin: string = '04/06/2021, 05:48:25 PM';
   card: any;
-
-  ngAfterViewInit() {
-    this.createPieChart();
-  }
-
-  createPieChart() {
-    const ctx = this.pieChartCanvas.nativeElement.getContext('2d');
-    this.chart = new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['Shopping', 'Food', 'Travel', 'Entertainment', 'Others'],
-        datasets: [{
-          data: [30, 25, 20, 15, 10],
-          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'right'
-          }
-        }
-      }
-    });
-  }
   activeTab: string = 'transactions';
-  // transactions = [
-  //   { type: 'Payment', to: 'Uber', amount: '-376€', time: '05:25 PM', debitedFrom: 'Personal Card', icon: 'fas fa-car' },
-  //   { type: 'Received From', from: 'Ralph Scott', amount: '+450 €', time: '2 hours ago', creditedTo: 'Savings Account', icon: 'fas fa-exchange-alt' },
-  //   { type: 'Salary Deposit', amount: '+5000€', time: '10 Hours ago', debitedFrom: 'Personal Card', icon: 'fas fa-money-bill-wave' }
-  // ];
   transactions = [
     {
       transactionID: '5000 3456 4523 3212',
