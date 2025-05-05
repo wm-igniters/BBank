@@ -7,7 +7,6 @@ channel = "stable-24_05"
 [[ports]]
 localPort = 4200
 externalPort = 80
-exposeLocalhost = true
 
 [deployment]
 run = ["sh", "-c", "npm run watch"]
