@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { SideNavComponent } from '../side-nav/side-nav.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cards',
