@@ -1,4 +1,3 @@
-
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
@@ -10,16 +9,19 @@ import { AuthService } from '../services/auth.service';
   standalone: true,
   imports: [CommonModule, MatMenuModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
   @Input() userName: string = '';
   @Input() lastLogin: string = '';
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(
+    private router: Router,
+    //private authService: AuthService,
+  ) {}
 
   logout() {
-    this.authService.logout();
+    //this.authService.logout();
     this.router.navigate(['/login']);
   }
 }
