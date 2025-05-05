@@ -122,6 +122,9 @@
 
           <div class="tab-content" *ngIf="activeTab === 'analysis'">
             <h3>Spend Analysis</h3>
+            <div class="chart-container">
+              <canvas #pieChart></canvas>
+            </div>
           </div>
         </div>
       </div>
