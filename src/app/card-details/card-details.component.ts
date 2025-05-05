@@ -2,19 +2,37 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
-import { AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { Chart } from 'chart.js/auto';
+import { HighchartsChartModule } from 'highcharts-angular';
+import * as Highcharts from 'highcharts';
 
 @Component({
   selector: 'app-card-details',
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent],
+  imports: [CommonModule, RouterModule, HeaderComponent, HighchartsChartModule],
   templateUrl: './card-details.component.html',
   styleUrls: ['./card-details.component.css'],
 })
 export class CardDetailsComponent implements OnInit, AfterViewInit {
-  @ViewChild('pieChart') pieChartCanvas!: ElementRef;
-  chart: any;
+  Highcharts: typeof Highcharts = Highcharts;
+  chartOptions: Highcharts.Options = {
+    chart: {
+      type: 'pie'
+    },
+    title: {
+      text: 'Spending Distribution'
+    },
+    series: [{
+      type: 'pie',
+      name: 'Spending',
+      data: [
+        ['Shopping', 30],
+        ['Food', 25],
+        ['Travel', 20],
+        ['Entertainment', 15],
+        ['Others', 10]
+      ]
+    }]
+  };
   userName: string = 'Brett Smith';
   lastLogin: string = '04/06/2021, 05:48:25 PM';
   card: any;
