@@ -7,7 +7,7 @@ import { SideNavComponent } from '../side-nav/side-nav.component';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent, SideNavComponent],
+  imports: [CommonModule, RouterModule, HeaderComponent, SideNavComponent, TranslateModule],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
 })

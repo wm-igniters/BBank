@@ -1,0 +1,19 @@
+
+{
+  "dashboard": {
+    "accounts": "Cuentas",
+    "addAccount": "Añadir Cuenta",
+    "cards": "Tarjetas",
+    "addCard": "Añadir Tarjeta",
+    "recentTransactions": "Transacciones Recientes",
+    "allAccounts": "Todas las Cuentas",
+    "cardHolder": "Nombre del Titular",
+    "expiryDate": "Fecha de Vencimiento"
+  },
+  "header": {
+    "goodAfternoon": "¡Buenas Tardes!",
+    "lastLogin": "Último Acceso:",
+    "admin": "Administrador",
+    "logout": "Cerrar Sesión"
+  }
+}

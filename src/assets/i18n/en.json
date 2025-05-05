@@ -1,0 +1,19 @@
+
+{
+  "dashboard": {
+    "accounts": "Accounts",
+    "addAccount": "Add Account",
+    "cards": "Cards",
+    "addCard": "Add Card",
+    "recentTransactions": "Recent Transactions",
+    "allAccounts": "All Accounts",
+    "cardHolder": "Card Holder Name",
+    "expiryDate": "Expiry Date"
+  },
+  "header": {
+    "goodAfternoon": "Good Afternoon!",
+    "lastLogin": "Last Login:",
+    "admin": "Admin",
+    "logout": "Logout"
+  }
+}

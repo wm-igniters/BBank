@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -17,8 +18,15 @@ export class HeaderComponent {
 
   constructor(
     private router: Router,
-    //private authService: AuthService,
-  ) {}
+    private translate: TranslateService
+  ) {
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
+
+  switchLanguage(lang: string) {
+    this.translate.use(lang);
+  }
 
   logout() {
     //this.authService.logout();
