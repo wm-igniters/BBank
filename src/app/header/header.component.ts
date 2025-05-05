@@ -8,7 +8,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, MatMenuModule],
+  imports: [CommonModule, MatMenuModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
@@ -18,7 +18,7 @@ export class HeaderComponent {
 
   constructor(
     private router: Router,
-    private translate: TranslateService
+    private translate: TranslateService,
   ) {
     translate.setDefaultLang('en');
     translate.use('en');

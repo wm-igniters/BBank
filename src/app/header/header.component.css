@@ -4,7 +4,7 @@
   align-items: center;
   padding: 1.5rem 2rem;
   background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-left {
@@ -73,4 +73,31 @@
 ::ng-deep .mat-mdc-menu-item i {
   margin-right: 8px;
   color: #666;
+}
+
+.language-switcher {
+  display: inline-flex;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.language-switcher button {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  color: #555;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.language-switcher button:focus {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.language-switcher button:not(:last-child) {
+  border-right: 1px solid #ccc;
 }

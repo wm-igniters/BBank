@@ -1,22 +1,21 @@
-
 <header class="header">
   <div class="header-left">
     <div class="brand">BB*</div>
     <div class="welcome">
-      {{ 'header.goodAfternoon' | translate }} {{userName}}
-      <div class="last-login">{{ 'header.lastLogin' | translate }} {{lastLogin}}</div>
+      {{ "header.goodAfternoon" | translate }} {{ userName }}
+      <div class="last-login">
+        {{ "header.lastLogin" | translate }} {{ lastLogin }}
+      </div>
     </div>
   </div>
   <div class="user-info">
-    <div class="user-role">Admin</div>
-    <div class="avatar-wrapper" [matMenuTriggerFor]="userMenu">
-
     <div class="language-switcher">
       <button (click)="switchLanguage('en')">EN</button>
       <button (click)="switchLanguage('es')">ES</button>
     </div>
-
-      <img src="/assets/user-avatar.png" alt="User" class="avatar"/>
+    <div class="user-role">Admin</div>
+    <div class="avatar-wrapper" [matMenuTriggerFor]="userMenu">
+      <img src="/assets/user-avatar.png" alt="User" class="avatar" />
       <div class="status-dot"></div>
     </div>
     <mat-menu #userMenu="matMenu">
