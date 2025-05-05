@@ -24,8 +24,27 @@
         <button class="add-button" (click)="navigateToApplyCard()">+ Apply Card</button>
       </div>
 
+      <h2>Physical Cards ({{physicalCards.length}})</h2>
       <div class="cards-grid">
-        <div class="credit-card" *ngFor="let card of cards" [style.background]="card.background" [routerLink]="['/cards', card.lastFourDigits]">
+        <div class="credit-card" *ngFor="let card of physicalCards" [style.background]="card.background" [routerLink]="['/cards', card.lastFourDigits]">
+          <div class="card-type">{{card.type}}</div>
+          <div class="card-number">•••• •••• •••• {{card.lastFourDigits}}</div>
+          <div class="card-details">
+            <div class="card-holder">
+              <span>Card Holder Name</span>
+              <div>{{card.holderName}}</div>
+            </div>
+            <div class="card-expiry">
+              <span>Expiry Date</span>
+              <div>{{card.expiryDate}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Virtual Cards ({{virtualCards.length}})</h2>
+      <div class="cards-grid">
+        <div class="credit-card" *ngFor="let card of virtualCards" [style.background]="card.background" [routerLink]="['/cards', card.lastFourDigits]">
           <div class="card-type">{{card.type}}</div>
           <div class="card-number">•••• •••• •••• {{card.lastFourDigits}}</div>
           <div class="card-details">

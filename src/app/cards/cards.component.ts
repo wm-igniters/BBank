@@ -14,20 +14,41 @@ import { HeaderComponent } from '../header/header.component';
 export class CardsComponent {
   userName: string = 'Brett Smith';
   lastLogin: string = '04/06/2021, 05:48:25 PM';
-  cards = [
+  physicalCards = [
     { 
-      type: 'Personal Card',
+      type: 'Personal Card (Debit)',
+      subtext: 'Home Account (GBP)',
       lastFourDigits: '4567',
       holderName: 'Brett Smith',
       expiryDate: '05/2025',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+      background: 'linear-gradient(135deg, #FF6B8B 0%, #FF5576 100%)'
     },
     {
-      type: 'Business Card',
-      lastFourDigits: '8559',
+      type: 'Personal Card (Debit)',
+      subtext: 'Home Account (GBP)',
+      lastFourDigits: '4567',
       holderName: 'Brett Smith',
       expiryDate: '05/2025',
-      background: 'linear-gradient(135deg, #6B73FF 0%, #000DFF 100%)'
+      background: 'linear-gradient(135deg, #5AA1FF 0%, #4A96FF 100%)'
+    }
+  ];
+
+  virtualCards = [
+    {
+      type: 'Personal Card (Debit)',
+      subtext: 'Home Account (GBP)',
+      lastFourDigits: '4567',
+      holderName: 'Brett Smith',
+      expiryDate: '05/2025',
+      background: 'linear-gradient(135deg, #FF6B8B 0%, #FF5576 100%)'
+    },
+    {
+      type: 'Personal Card (Debit)',
+      subtext: 'Home Account (GBP)',
+      lastFourDigits: '4567',
+      holderName: 'Brett Smith',
+      expiryDate: '05/2025',
+      background: 'linear-gradient(135deg, #50D6A0 0%, #3ECF97 100%)'
     }
   ];
 
