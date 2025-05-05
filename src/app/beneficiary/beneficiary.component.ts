@@ -15,8 +15,35 @@ import { HeaderComponent } from '../header/header.component';
 export class BeneficiaryComponent {
   userName: string = 'Brett Smith';
   lastLogin: string = '04/06/2021, 05:48:25 PM';
+  beneficiaries: any[] = [];
 
-  beneficiaries = [
+  constructor(private beneficiaryService: BeneficiaryService) {}
+
+  ngOnInit() {
+    this.loadBeneficiaries();
+  }
+
+  loadBeneficiaries() {
+    this.beneficiaryService.getBeneficiaries()
+      .subscribe(data => {
+        this.beneficiaries = data;
+      });
+  }
+
+  addBeneficiary() {
+    const newBeneficiary = {
+      name: 'New Beneficiary',
+      phone: '+1 123 456 7890',
+      email: 'new@example.com',
+      defaultAcc: 'XXXX XX 00',
+      avatar: '👤'
+    };
+    
+    this.beneficiaryService.addBeneficiary(newBeneficiary)
+      .subscribe(response => {
+        this.beneficiaries.push(response);
+      });
+  }
     {
       name: 'Samantha Tran (Sam)',
       phone: '+1 335 246 3546',
