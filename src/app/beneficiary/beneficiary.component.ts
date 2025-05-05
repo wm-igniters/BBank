@@ -27,54 +27,11 @@ export class BeneficiaryComponent implements OnInit {
   loadBeneficiaries() {
     this.authService.getBeneficiaries().subscribe({
       next: (data) => {
-        this.beneficiaries = data;
+        this.beneficiaries = Array.isArray(data) ? data : [data];
       },
       error: (error) => {
         console.error('Error fetching beneficiaries:', error);
       }
     });
   }
-    {
-      name: 'Samantha Tran (Sam)',
-      phone: '+1 335 246 3546',
-      email: 'john.doe@gmail.com',
-      defaultAcc: 'XXXX XX 99',
-      avatar: '👩'
-    },
-    {
-      name: 'John Doe (John)',
-      phone: '+1 335 246 3546',
-      email: 'john.doe@gmail.com',
-      defaultAcc: 'XXXX XX 99',
-      avatar: '🏢'
-    },
-    {
-      name: 'John Doe (John)',
-      phone: '+1 335 246 3546',
-      email: 'john.doe@gmail.com',
-      defaultAcc: 'XXXX XX 99',
-      avatar: '👨'
-    },
-    {
-      name: 'John Doe (John)',
-      phone: '+1 335 246 3546',
-      email: 'john.doe@gmail.com',
-      defaultAcc: 'XXXX XX 99',
-      avatar: '🏢'
-    },
-    {
-      name: 'Samantha Tran (Sam)',
-      phone: '+1 335 246 3546',
-      email: 'john.doe@gmail.com',
-      defaultAcc: 'XXXX XX 99',
-      avatar: '👩'
-    },
-    {
-      name: 'John Doe (John)',
-      phone: '+1 335 246 3546',
-      email: 'john.doe@gmail.com',
-      defaultAcc: 'XXXX XX 99',
-      avatar: '👨'
-    }
-  ];
 }
