@@ -1,0 +1,61 @@
+
+<div class="beneficiary-container">
+  <nav class="side-nav">
+    <div class="nav-item" routerLink="/dashboard">
+      <i class="fas fa-th-large"></i>
+      Dashboard
+    </div>
+    <div class="nav-item active">
+      <i class="fas fa-user"></i>
+      Beneficiary
+    </div>
+    <div class="nav-item" routerLink="/cards">
+      <i class="fas fa-credit-card"></i>
+      Cards
+    </div>
+  </nav>
+
+  <div class="main-section">
+    <app-header [userName]="userName" [lastLogin]="lastLogin"></app-header>
+
+    <div class="beneficiary-content">
+      <div class="header">
+        <h1>Beneficiary</h1>
+        <button class="add-button">+ Add Beneficiary</button>
+      </div>
+
+      <div class="beneficiary-grid">
+        <div class="beneficiary-card" *ngFor="let beneficiary of beneficiaries">
+          <div class="beneficiary-header">
+            <div class="beneficiary-details">
+              <h3>{{beneficiary.name}}</h3>
+              <div class="contact-info">
+                <div class="phone">
+                  <i class="fas fa-phone"></i>
+                  {{beneficiary.phone}}
+                </div>
+                <div class="email">
+                  <i class="fas fa-envelope"></i>
+                  {{beneficiary.email}}
+                </div>
+              </div>
+            </div>
+            <div class="avatar">{{beneficiary.avatar}}</div>
+          </div>
+
+          <div class="account-info">
+            <div class="default-acc">
+              Default Acc: {{beneficiary.defaultAcc}}
+              <button class="change-btn">Change</button>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="transfer-btn">TRANSFER FUNDS</button>
+            <button class="edit-btn">EDIT DETAILS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@ import { CardsComponent } from './cards/cards.component';
 import { RegisterTypeComponent } from './register-type/register-type.component';
 import { IndividualRegisterComponent } from './individual-register/individual-register.component';
 import { CardDetailsComponent } from './card-details/card-details.component';
+import { BeneficiaryComponent } from './beneficiary/beneficiary.component';
 
 export const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -16,4 +17,5 @@ export const routes: Routes = [
   { path: 'cards', component: CardsComponent },
   { path: 'cards/:id', component: CardDetailsComponent },
   { path: 'apply-card', component: ApplyCardComponent },
+  { path: 'beneficiary', component: BeneficiaryComponent },
 ];

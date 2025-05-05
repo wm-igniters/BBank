@@ -1,0 +1,129 @@
+
+.beneficiary-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.side-nav {
+  width: 250px;
+  background: white;
+  padding: 20px;
+}
+
+.nav-item {
+  padding: 15px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-item.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.main-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.add-button {
+  background-color: #FF7A59;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+}
+
+.beneficiary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.beneficiary-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+}
+
+.beneficiary-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-info div {
+  margin: 5px 0;
+}
+
+.avatar {
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border-radius: 50%;
+}
+
+.account-info {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  margin: 15px 0;
+}
+
+.default-acc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.change-btn {
+  color: #FF7A59;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.transfer-btn, .edit-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+}
+
+.transfer-btn {
+  background-color: #FF7A59;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #f0f0f0;
+  color: #666;
+}
